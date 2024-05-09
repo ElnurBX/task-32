@@ -1,0 +1,65 @@
+{
+  "products": [
+    {
+      "title": "11",
+      "price": 11,
+      "discount": 11,
+      "img": "https://cdn.britannica.com/93/215393-050-E428CADE/Canadian-actor-musician-Ryan-Gosling-2016.jpg",
+      "sale": true,
+      "rating": 0,
+      "id": "fa457961-09a6-45d7-815f-898d431de29d"
+    },
+    {
+      "id": "0bd1c7cf-8db8-47e3-9703-8da2b894d527",
+      "title": "elekim",
+      "price": 2,
+      "discount": 2,
+      "img": "https://cdn.britannica.com/93/215393-050-E428CADE/Canadian-actor-musician-Ryan-Gosling-2016.jpg",
+      "sale": true,
+      "rating": 0
+    },
+    {
+      "title": "1231",
+      "price": 3121,
+      "discount": 100,
+      "img": "https://avatars.mds.yandex.net/get-shedevrum/12154130/img_030de66e027411efb2b76a0ca4a8c0f5/orig",
+      "sale": true,
+      "rating": 0,
+      "id": "3bf370a0-4726-4d2a-a513-b485c027f4d9"
+    },
+    {
+      "id": "58f4f83a-f515-4363-9ad3-d986ba15f78d",
+      "title": "salam",
+      "price": 11,
+      "discount": 11,
+      "img": "https://avatars.mds.yandex.net/get-shedevrum/12154130/img_030de66e027411efb2b76a0ca4a8c0f5/orig",
+      "sale": true,
+      "rating": 0
+    },
+    {
+      "id": "993daa87-a2b4-4f3e-b564-3bc4fe0418aa",
+      "title": "1`2312",
+      "price": 231321,
+      "discount": 21,
+      "img": "https://avatars.mds.yandex.net/get-shedevrum/12154130/img_030de66e027411efb2b76a0ca4a8c0f5/orig",
+      "sale": false,
+      "rating": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "Lemur",
+    "password": "123456"
+  }
+}
