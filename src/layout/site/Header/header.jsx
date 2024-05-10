@@ -56,7 +56,7 @@ const Header = () => {
                                 Shop
                             </button>
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to="#">Action</Link></li>
+                                <li><Link className="dropdown-item" to="/blog">blog</Link></li>
                                 <li><Link className="dropdown-item" to="#">Another action</Link></li>
                                 <li><Link className="dropdown-item" to="#">Something else here</Link></li>
                             </ul>
@@ -71,10 +71,12 @@ const Header = () => {
                             <ul>
                                 {cartBasket.map(item => (
                                     <li key={item.item.id}>
+                                        <img width={"40px"} height={"40px"} src={item.item.img} alt="" />
                                         {item.item.title}
                                         <div className="counter">
                                             <button onClick={() => decricentCount(item.item.id)}> - </button>
                                             {item.count}
+                                            
                                             <button onClick={() => incricentCount(item.item.id)}> + </button>
                                         </div>
                                     </li>

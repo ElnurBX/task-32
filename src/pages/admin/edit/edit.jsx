@@ -6,7 +6,7 @@ import "../add/add.scss"
     
 const Edit = () => {
     const { id } = useParams();
-    const [edit, setEdit] = useState({}); // edit state'inin boş bir nesne olarak başlatılması
+    const [edit, setEdit] = useState({}); 
 
     useEffect(() => {
         axios.get(`http://localhost:3000/products/${id}`)
@@ -28,22 +28,22 @@ const Edit = () => {
                 }}
                 validate={values => {
                     const errors = {};
-                    if (!values.title) {
-                        errors.title = 'edit Required';
-                    }
-                    if (!values.price) {
-                        errors.price = 'edit Required';
-                    }
-                    if (!values.discount ) {
-                        errors.discount = 'edit Required';
-                    }else if( values.discount >= 101){
-                        errors.discount = 'max 100% ';
-                    }
-                    
-                    if (!values.img) {
-                        errors.img = 'edit Required';
-                    }
-                    return errors;
+                        if (!values.title) {
+                            errors.title = 'edit Required';
+                        }
+                        if (!values.price) {
+                            errors.price = 'edit Required';
+                        }
+                        if (!values.discount ) {
+                            errors.discount = 'edit Required';
+                        }else if( values.discount >= 101){
+                            errors.discount = 'max 100% ';
+                        }
+                        
+                        if (!values.img) {
+                            errors.img = 'edit Required';
+                        }
+                        return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {

@@ -20,6 +20,12 @@ const Header = () => {
               <li>
                 <Link to="/admin/add"><i className="fa-solid fa-plus"></i> Add Product</Link >
               </li>
+              <li>
+                <Link to="/admin/Blogdashboord"><i className="fa-solid fa-table-columns"></i> Blog Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/admin/addblog"><i className="fa-solid fa-plus"></i> Add Blog</Link >
+              </li>
             </ul>
           </nav>
     </header>
