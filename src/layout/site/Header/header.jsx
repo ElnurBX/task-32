@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import MainContext from '../../../context/context';
 
 const Header = () => {
     const [modal, setModal] = useState(false);
-    const [cartBasket, setCartBasket] = useState(() => {
-        const storedCart = localStorage.getItem('cart');
-        return storedCart ? JSON.parse(storedCart) : [];
-    });
+    const {cartBasket, setCartBasket} = useContext(MainContext); 
 
     const updateLocalStorage = (updatedCartBasket) => {
         localStorage.setItem('cart', JSON.stringify(updatedCartBasket));
