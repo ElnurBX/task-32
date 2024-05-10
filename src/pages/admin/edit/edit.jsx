@@ -66,6 +66,7 @@ const Edit = () => {
                 }) => (
                     <form onSubmit={handleSubmit}>
                         <input
+                            placeholder='title'
                             type="text"
                             name="title"
                             onChange={handleChange}
@@ -74,6 +75,7 @@ const Edit = () => {
                         />
                         {errors.title && touched.title && errors.title}
                         <input
+                            placeholder='price'
                             type="number"
                             name="price"
                             onChange={handleChange}
@@ -82,6 +84,7 @@ const Edit = () => {
                         />
                         {errors.price && touched.price && errors.price}
                         <input
+                            placeholder='discount'
                             type="number"
                             name="discount"
                             onChange={handleChange}
@@ -90,6 +93,7 @@ const Edit = () => {
                         />
                         {errors.discount && touched.discount && errors.discount}
                         <input
+                            placeholder='img'
                             type="url"
                             name="img"
                             onChange={handleChange}
@@ -101,6 +105,7 @@ const Edit = () => {
                         <label htmlFor="sale">
                             <p>Sale:</p>
                             <input
+                             
                                 type="checkbox"
                                 name="sale"
                                 onChange={handleChange}

@@ -53,6 +53,7 @@ const Add = () => (
       }) => (
         <form onSubmit={handleSubmit}>
           <input
+          placeholder='title'
             type="text"
             name="title"
             onChange={handleChange}
@@ -61,6 +62,7 @@ const Add = () => (
           />
           {errors.title && touched.title && errors.title}
           <input
+          placeholder='price'
             type="number"
             name="price"
             onChange={handleChange}
@@ -69,6 +71,7 @@ const Add = () => (
           />
           {errors.price && touched.price && errors.price}
           <input
+            placeholder='discount'
             type="number"
             name="discount"
             onChange={handleChange}
@@ -77,6 +80,7 @@ const Add = () => (
           />
           {errors.discount && touched.discount && errors.discount}
           <input
+          placeholder='image url'
             type="url"
             name="img"
             onChange={handleChange}
@@ -87,6 +91,7 @@ const Add = () => (
           <label htmlFor="sale">
           <p>Sale:</p>
           <input
+          
             type="checkbox"
             name="sale"
             onChange={handleChange}

@@ -5,6 +5,7 @@ import SiteRoot from "../pages/site/SiteRoot";
 import Dashboard from "../pages/admin/dashbord/dashbord";
 import Add from "../pages/admin/add/add";
 import Edit from "../pages/admin/edit/edit";
+import Error from "../pages/error/error";
 const ROUTES =[
     {
         path:"/",
@@ -39,5 +40,10 @@ const ROUTES =[
 
         ]
     }
+    ,    {
+        path:"*",
+        element:<Error/>,
+        
+    },
 ]
 export default ROUTES
