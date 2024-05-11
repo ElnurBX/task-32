@@ -28,8 +28,13 @@ const Cart = ({ item }) => {
     };
     const renderRatingStars = () => {
         let stars = [];
-        for (let index = 0; index < item.rating; index++) {
-            stars.push(<i key={index} className="fa-solid fa-star"></i>);
+        if (item.rating && item.rating.count) {
+            const totalRatings = item.rating.count;
+            const averageRating = totalRatings > 0 ? item.rating.ratings.reduce((a, b) => a + b, 0) / totalRatings : 0;
+            for (let index = 0; index < Math.round(averageRating); index++) {
+                stars.push(<i key={index} className="fa-solid fa-star"></i>);
+            }
+            stars.push(<span key={"final"} className='pl-5 '>    (  {item.rating.count})</span>)
         }
         return stars;
     };
@@ -41,7 +46,7 @@ const Cart = ({ item }) => {
                 <div className="Home__page__content__cards__card__info">
                     <h3>{item.title}</h3>
                     {item.rating ? <span><div> {renderRatingStars()} </div></span> : ''}
-                    <p>{item.price}</p>
+                    <p><del>{item.price} $</del> {item.price*(item.discount/100)}$</p>
                 </div>
                 <div className="Home__page__content__cards__card__button">
                     <button onClick={addBasket}>Shop Now</button>

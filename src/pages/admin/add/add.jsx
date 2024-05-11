@@ -9,7 +9,7 @@ const Add = () => (
 
     <h2>Add Product</h2>
     <Formik 
-      initialValues={{ title: '', price: '', discount: '' ,img:'',sale:false ,rating:0,id:uuidv4()}}
+      initialValues={{ title: '', price: '', discount: '' ,img:'',sale:false ,  rating:{"count":0,"ratings":[]},id:uuidv4()}}
       validate={values => {
         const errors = {};
         if (!values.title) {

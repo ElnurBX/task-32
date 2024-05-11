@@ -64,7 +64,7 @@ const Dashboard = () => {
                 <td>{product.price}</td>
                 <td>{product.sale ? "true" : "false"}</td>
                 <td>{product.discount}</td>
-                <td>{product.rating}</td>
+                <td>{(product.rating.ratings.reduce((a, b) => a + b, 0) / product.rating.count)}</td>
                 <td>
                   <Link to={`/admin/add/${product.id}`}>
                     <button className='btn btn-primary'>edit</button>

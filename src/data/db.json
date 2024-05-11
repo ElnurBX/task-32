@@ -1,22 +1,61 @@
 {
   "products": [
     {
-      "id": "fbe1bfe6-9c87-4c61-9cbd-18e95b6ca4f2",
-      "title": "123123",
-      "price": 1221,
-      "discount": 12,
+      "title": "saslaMa11",
+      "price": 1221421,
+      "discount": 11,
       "img": "https://cdn.britannica.com/93/215393-050-E428CADE/Canadian-actor-musician-Ryan-Gosling-2016.jpg",
       "sale": true,
-      "rating": 5
+      "rating": {
+        "count": 1,
+        "ratings": [
+          3
+        ]
+      },
+      "id": "fbe1bfe6-9c87-4c61-9cbd-18e95b6ca4f2"
     },
     {
-      "title": "q12",
-      "price": 213,
-      "discount": 21,
+      "title": "q1211",
+      "price": 21311,
+      "discount": 2,
       "img": "https://cdn.britannica.com/93/215393-050-E428CADE/Canadian-actor-musician-Ryan-Gosling-2016.jpg",
-      "sale": false,
-      "rating": 4,
+      "sale": true,
+      "rating": {
+        "count": 2,
+        "ratings": [
+          4,
+          5
+        ]
+      },
       "id": "4f9d1b5b-a040-4e18-b4ad-b8e5c3c259f1"
+    },
+    {
+      "id": "e9f22ce8-ae3f-4c0c-8795-91737877a384",
+      "title": "alfa",
+      "price": 12,
+      "discount": 21,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg6EsdyvfuueGwq3YVXMZFHn9-jpFj5nRCK3n2Bx3jYA&s",
+      "sale": false,
+      "rating": {
+        "count": 1,
+        "ratings": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "3959a7f5-1c46-4d07-84d7-dab0f447323d",
+      "title": "213",
+      "price": 1231,
+      "discount": 12,
+      "img": "https://avatars.mds.yandex.net/get-shedevrum/12154130/img_030de66e027411efb2b76a0ca4a8c0f5/orig",
+      "sale": false,
+      "rating": {
+        "count": 1,
+        "ratings": [
+          5
+        ]
+      }
     }
   ],
   "Blog": [

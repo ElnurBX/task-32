@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import '../dashbord/dashboord.scss';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import Loading from '../../loading/Loading';
 import MainContext from '../../../context/context';
 
@@ -48,7 +47,6 @@ const BlogDashboord = () => {
             <th scope="col">sale</th>
             <th scope="col">discount</th>
             <th scope="col">star</th>
-            <th scope="col">edit</th>
             <th scope="col">delete</th>
           </tr>
         </thead>
@@ -65,11 +63,6 @@ const BlogDashboord = () => {
                 <td>{Blog.CreateTime}</td>
                 <td>{Blog.Description}</td>
                 <td>{Blog.Viuse}</td>
-                <td>
-                  <Link to={`/admin/add/${Blog.id}`}>
-                    <button className='btn btn-primary'>edit</button>
-                  </Link>
-                </td>
                 <td>
                   <button className='btn btn-danger' onClick={() => deletePost(Blog.id)}>delete</button>
                 </td>

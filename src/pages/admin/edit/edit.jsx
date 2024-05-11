@@ -105,7 +105,6 @@ const Edit = () => {
                         <label htmlFor="sale">
                             <p>Sale:</p>
                             <input
-                             
                                 type="checkbox"
                                 name="sale"
                                 onChange={handleChange}

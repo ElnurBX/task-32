@@ -17,20 +17,34 @@ const Details = () => {
     }, [id]);
     
     const newReting = (number) => {
+        const { count, ratings } = details.rating;
+        const newCount = count + 1;
+        const newRatings = [...ratings, number];
+        const dataRet = {
+            count: newCount,
+            ratings: newRatings
+        };
         setTimeout(() => {
-            axios.put(`http://localhost:3000/products/${id}`, { ...details, rating: number })
+            axios.put(`http://localhost:3000/products/${id}`, { ...details, rating: dataRet })
                 .then(res => setDetails(res.data))
                 .catch(err => console.log(err));
         }, 200);
     };
-
+    
     const renderRatingStars = () => {
         let stars = [];
-        for (let index = 0; index < details.rating; index++) {
-            stars.push(<i key={index} className="fa-solid fa-star"></i>);
+        if (details.rating && details.rating.count) {
+            const totalRatings = details.rating.count;
+            const averageRating = totalRatings > 0 ? details.rating.ratings.reduce((a, b) => a + b, 0) / totalRatings : 0;
+            for (let index = 0; index < Math.round(averageRating); index++) {
+                stars.push(<i key={index} className="fa-solid fa-star"></i>);
+            }
+            stars.push(<span className='pl-5 '>    (  {details.rating.count})</span>)
         }
         return stars;
     };
+    
+    
 
     return (
         <div className="container">
